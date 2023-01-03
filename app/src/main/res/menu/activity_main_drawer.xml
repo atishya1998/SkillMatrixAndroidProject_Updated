@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/icons8_businessman"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/icons8_business_grp"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/icons8_projects"
+            android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_notify_hr"
+            android:icon="@drawable/icons8_human_resources"
+            android:title="@string/menu_notify_hr" />
+        <item
+            android:id="@+id/nav_scheduler"
+            android:icon="@drawable/icons8_appointment_scheduling"
+            android:title="@string/menu_scheduler" />
+    </group>
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="meeting_title" type="id">@id/meeting_title</item>
+    <item name="meeting_location" type="id">@id/meeting_location</item>
+    <item name="meeting_desc" type="id">@id/meeting_desc</item>
+    <item name="emailList" type="id">@id/emailList</item>
+    <item name="scheduler_button" type="id">@id/scheduler_button</item>
+    <item name="in_date" type="id">@id/in_date</item>
+    <item name="btn_date" type="id">@id/btn_date</item>
+    <item name="in_date_end" type="id">@id/in_date_end</item>
+    <item name="btn_time" type="id">@id/btn_time</item>
+    <item name="in_time" type="id">@id/btn_time_end</item>
+    <item name="btn_date_end" type="id">@id/btn_date_end</item>
+    <item name="in_time_end" type="id">@id/in_time_end</item>
+    <item name="btn_time_end" type="id">@id/btn_time_end</item>
+</resources>

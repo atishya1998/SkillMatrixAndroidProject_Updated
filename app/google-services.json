@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1073190197702",
+    "project_id": "skillmatrix22",
+    "storage_bucket": "skillmatrix22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073190197702:android:ecf19c8cb6baeb831c7ac7",
+        "android_client_info": {
+          "package_name": "com.example.skillmatrix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1073190197702-albpg9nkos6l0vfm8uj8rvcda8h1ebte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzveO65itADapEMgVaNbq6DcerjSYkoZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073190197702-albpg9nkos6l0vfm8uj8rvcda8h1ebte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

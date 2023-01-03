@@ -1,0 +1,474 @@
+@startuml
+class com.example.skillmatrix.databinding.NavHeaderMainBinding {
+- LinearLayout rootView
++ ImageView imageView
++ TextView navEmail
++ TextView navRole
++ LinearLayout getRoot()
++ {static} NavHeaderMainBinding inflate(LayoutInflater)
++ {static} NavHeaderMainBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} NavHeaderMainBinding bind(View)
+}
+class com.example.skillmatrix.ui.notifyHR.NotifyHRViewModel {
+- MutableLiveData<String> mText
++ LiveData<String> getText()
+}
+class com.example.skillmatrix.databinding.ListItemBinding {
+- MaterialCardView rootView
++ ImageButton imageButton
++ ImageView imageView
++ TextView navEmail
++ TextView navRole
++ MaterialCardView relativeLayout
++ MaterialCardView getRoot()
++ {static} ListItemBinding inflate(LayoutInflater)
++ {static} ListItemBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ListItemBinding bind(View)
+}
+class com.example.skillmatrix.Model.Skills {
+- String skillName
+- int skillLevel
++ {static} Creator<Skills> CREATOR
++ String getSkillName()
++ void setSkillName(String)
++ int getSkillLevel()
++ void setSkillLevel(int)
++ int describeContents()
++ void writeToParcel(Parcel,int)
+}
+class com.example.skillmatrix.MainActivity {
+- AppBarConfiguration mAppBarConfiguration
+- ActivityMainBinding binding
+- NavigationView navigationView
+- NavController navController
+- Bundle bundle
+# void onCreate(Bundle)
++ boolean onSupportNavigateUp()
++ void onBackPressed()
+}
+class com.example.skillmatrix.databinding.ActivityAddEmployeeBinding {
+- LinearLayout rootView
++ RecyclerView employeeList
++ RadioGroup radioGroup
++ LinearLayout getRoot()
++ {static} ActivityAddEmployeeBinding inflate(LayoutInflater)
++ {static} ActivityAddEmployeeBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityAddEmployeeBinding bind(View)
+}
+class com.example.skillmatrix.databinding.FragmentNotifyhrBinding {
+- ConstraintLayout rootView
++ TextView textSlideshow
++ ConstraintLayout getRoot()
++ {static} FragmentNotifyhrBinding inflate(LayoutInflater)
++ {static} FragmentNotifyhrBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentNotifyhrBinding bind(View)
+}
+class com.example.skillmatrix.ReporteesDetailActivity {
+~ TextView address
+~ Slider slider
+- FirebaseFirestore firestore
+~ Map<String,Object> rating
+~ List<DataEntry> data
+~ Cartesian cartesian
+# void onCreate(Bundle)
++ boolean onOptionsItemSelected(MenuItem)
+}
+class com.example.skillmatrix.databinding.FragmentSlideshowBinding {
+- LinearLayout rootView
++ ImageButton addBtn
++ TextView desc
++ TextView remainingPositions
++ RecyclerView requirementsList
++ LinearLayout getRoot()
++ {static} FragmentSlideshowBinding inflate(LayoutInflater)
++ {static} FragmentSlideshowBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentSlideshowBinding bind(View)
+}
+class com.example.skillmatrix.databinding.FragmentHomeBinding {
+- ScrollView rootView
++ TextView address
++ AnyChartView anyChartView
++ AnyChartView anyChartView2
++ TextView blood
++ TextView exp
++ TextView phone
++ TextView project
++ TextView projectAssigned
++ TextView role
++ ScrollView getRoot()
++ {static} FragmentHomeBinding inflate(LayoutInflater)
++ {static} FragmentHomeBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentHomeBinding bind(View)
+}
+class com.example.skillmatrix.databinding.ActivityReporteesDetailBinding {
+- ScrollView rootView
++ TextView addressRep
++ AnyChartView anyChartView2Rep
++ AnyChartView anyChartViewRep
++ TextView bloodRep
++ TextView expRep
++ Slider managerRatingRep
++ TextView phoneRep
++ TextView projectAssignedRep
++ TextView projectRep
++ TextView roleRep
++ ScrollView getRoot()
++ {static} ActivityReporteesDetailBinding inflate(LayoutInflater)
++ {static} ActivityReporteesDetailBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityReporteesDetailBinding bind(View)
+}
+class com.example.skillmatrix.ui.gallery.MyListData {
+- String description
+- int imgId
+- String role
++ String getDescription()
++ void setDescription(String)
++ int getImgId()
++ void setImgId(int)
++ String getRole()
++ void setRole(String)
+}
+class com.example.skillmatrix.ui.gallery.MyListAdapter {
+- ArrayList<MyListData> listdata
+- Context context
+- String activityStr
+- String selectedRadioBtn
+- String projectStr
+- RadioGroup radioGroup
+- String RadioId
+- ArrayList<String> unassignedList
++ void addStrings(String,String)
++ void addRadioGroup(RadioGroup,String)
++ void addUnassignedList(ArrayList<String>)
++ ViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(ViewHolder,int)
++ MyListData getItem(int)
++ void removeItem(int)
++ int getItemCount()
+}
+class com.example.skillmatrix.ui.gallery.MyListAdapter.ViewHolder {
++ ImageView imageView
++ TextView textView
++ CardView relativeLayout
++ ImageButton add
+}
+class com.example.skillmatrix.BuildConfig {
++ {static} boolean DEBUG
++ {static} String APPLICATION_ID
++ {static} String BUILD_TYPE
++ {static} int VERSION_CODE
++ {static} String VERSION_NAME
+}
+class com.example.skillmatrix.AddandEditMyProfile {
+~ TextInputLayout addressLayout
+~ TextInputEditText address
+~ FirebaseFirestore fireStore
+~ Slider MyRating
+~ Map<String,Object> rating
+~ RecyclerView recyclerView
+~ String id
+# void onCreate(Bundle)
++ void onBackPressed()
++ boolean onOptionsItemSelected(MenuItem)
++ void onItemClick(Skills)
+}
+class com.example.skillmatrix.databinding.SkillRecyclerViewBinding {
+- LinearLayout rootView
++ TextView levelTV
++ TextView skillTV
++ LinearLayout getRoot()
++ {static} SkillRecyclerViewBinding inflate(LayoutInflater)
++ {static} SkillRecyclerViewBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} SkillRecyclerViewBinding bind(View)
+}
+class com.example.skillmatrix.databinding.DialogBinding {
+- MaterialCardView rootView
++ Button cancel
++ Button delete
++ TextView dialogTitle
++ TextView skillName
++ MaterialCardView getRoot()
++ {static} DialogBinding inflate(LayoutInflater)
++ {static} DialogBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} DialogBinding bind(View)
+}
+class com.example.skillmatrix.ui.slideshow.ProjectsRequirementsViewModel {
+- MutableLiveData<String> mText
++ LiveData<String> getText()
+}
+class com.example.skillmatrix.ui.scheduler.SchedulerViewModel {
+- MutableLiveData<String> mText
++ LiveData<String> getText()
+}
+class com.example.skillmatrix.ui.scheduler.SchedulerFragment {
+- FragmentSlideshowBinding binding
+~ EditText meetTitle
+~ TextView textView
+~ boolean[] selectedEmail
+~ StringBuilder stringBuilder
+~ ArrayList<Integer> langList
+~ String[] emailArray
+~ ArrayList<String> emailList
+~ Button btnDatePicker
+~ EditText txtDate
+- int mYear
+~ int j
++ {static} String rootPath
+~ FirebaseFirestore db
++ Button button
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void onDestroyView()
+- Boolean validateDates(String,String)
+- String validate(int)
+}
+class com.example.skillmatrix.Register {
+# void onCreate(Bundle)
+}
+class com.example.skillmatrix.databinding.FragmentSchedulerBinding {
+- ConstraintLayout rootView
++ Button btnDate
++ Button btnDateEnd
++ Button btnTime
++ Button btnTimeEnd
++ TextView emailList
++ EditText inDate
++ EditText inDateEnd
++ EditText inTime
++ EditText inTimeEnd
++ EditText meetingDesc
++ EditText meetingLocation
++ EditText meetingTitle
++ Button schedulerButton
++ TextView textSlideshow
++ ConstraintLayout getRoot()
++ {static} FragmentSchedulerBinding inflate(LayoutInflater)
++ {static} FragmentSchedulerBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentSchedulerBinding bind(View)
+}
+class com.example.skillmatrix.databinding.ActivityMainBinding {
+- DrawerLayout rootView
++ AppBarMainBinding appBarMain
++ DrawerLayout drawerLayout
++ NavigationView navView
++ DrawerLayout getRoot()
++ {static} ActivityMainBinding inflate(LayoutInflater)
++ {static} ActivityMainBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityMainBinding bind(View)
+}
+class com.example.skillmatrix.ui.home.MyProfileFragment {
+~ TextView address
+~ String addressString
+- FirebaseFirestore firestore
+~ Map<String,Object> rating
+~ ArrayList<Skills> skills
++ void onCreate(Bundle)
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void onResume()
++ void onPause()
++ void onDestroy()
++ void onCreateOptionsMenu(Menu,MenuInflater)
++ boolean onOptionsItemSelected(MenuItem)
+}
+class com.example.skillmatrix.databinding.ContentMainBinding {
+- ConstraintLayout rootView
++ ConstraintLayout getRoot()
++ {static} ContentMainBinding inflate(LayoutInflater)
++ {static} ContentMainBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ContentMainBinding bind(View)
+}
+class com.example.skillmatrix.ExampleInstrumentedTest {
++ void useAppContext()
+}
+class com.example.skillmatrix.ui.home.MyProfileViewModel {
+- MutableLiveData<String> mText
++ LiveData<String> getText()
+}
+class com.example.skillmatrix.ui.notifyHR.NotifyHRFragment {
+- FragmentSlideshowBinding binding
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void onDestroyView()
+}
+class com.example.skillmatrix.ui.gallery.ManagersReporteesFragment {
+# {static} String ACTIVITY_NAME
++ {static} String rootPath
+~ FirebaseFirestore db
+~ List<String> empList
+- FragmentGalleryBinding binding
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void populateReporteeList()
++ void onDestroyView()
+}
+class com.example.skillmatrix.databinding.FragmentGalleryBinding {
+- ConstraintLayout rootView
++ RecyclerView recyclerView
++ TextView textGallery
++ ConstraintLayout getRoot()
++ {static} FragmentGalleryBinding inflate(LayoutInflater)
++ {static} FragmentGalleryBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} FragmentGalleryBinding bind(View)
+}
+class com.example.skillmatrix.AddEmployeeActivity {
+- String selectedRadioBtn
+~ MyListAdapter adapter
+~ ArrayList<String> unassignedList
+# void onCreate(Bundle)
++ boolean onOptionsItemSelected(MenuItem)
+}
+class com.example.skillmatrix.databinding.AppBarMainBinding {
+- CoordinatorLayout rootView
++ FloatingActionButton fab
++ Toolbar toolbar
++ CoordinatorLayout getRoot()
++ {static} AppBarMainBinding inflate(LayoutInflater)
++ {static} AppBarMainBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} AppBarMainBinding bind(View)
+}
+class com.example.skillmatrix.databinding.LoginActivityBinding {
+- RelativeLayout rootView
++ MaterialButton LoginButton
++ TextView appheading
++ EditText email
++ TextView emailtext
++ EditText password
++ TextView passwordtext
++ ProgressBar progressBar
++ TextView registerTV
++ RelativeLayout getRoot()
++ {static} LoginActivityBinding inflate(LayoutInflater)
++ {static} LoginActivityBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} LoginActivityBinding bind(View)
+}
+class com.example.skillmatrix.databinding.ActivityAddandEditMyProfileBinding {
+- LinearLayout rootView
++ TextView Skills
++ MaterialButton addBtn
++ TextInputEditText addressET
++ TextInputLayout addressLayout
++ TextInputEditText bloodET
++ TextInputLayout bloodLayout
++ EditText levelET
++ TextInputEditText phoneET
++ TextInputLayout phoneLayout
++ MaterialButton saveBtn
++ Slider seekBar
++ EditText skillET
++ RecyclerView skillsRV
++ TextInputEditText yearET
++ TextInputLayout yearLayout
++ LinearLayout getRoot()
++ {static} ActivityAddandEditMyProfileBinding inflate(LayoutInflater)
++ {static} ActivityAddandEditMyProfileBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} ActivityAddandEditMyProfileBinding bind(View)
+}
+class com.example.skillmatrix.ui.gallery.ManagersReporteesViewModel {
+- MutableLiveData<String> mText
++ LiveData<String> getText()
+}
+class com.example.skillmatrix.databinding.RegisterActivityBinding {
+- LinearLayout rootView
++ EditText FullnameET
++ MaterialButton RegisterButton
++ TextView appheading
++ EditText emailET
++ TextView emailtext
++ TextView firstname
++ EditText passwordET
++ TextView passwordtext
++ TextView register
++ TextView userid
++ EditText useridET
++ LinearLayout getRoot()
++ {static} RegisterActivityBinding inflate(LayoutInflater)
++ {static} RegisterActivityBinding inflate(LayoutInflater,ViewGroup,boolean)
++ {static} RegisterActivityBinding bind(View)
+}
+class com.example.skillmatrix.Login {
+# void onCreate(Bundle)
+}
+class com.example.skillmatrix.ui.slideshow.ProjectsRequirementsFragment {
+- FragmentSlideshowBinding binding
+~ String projectStr
+~ ArrayList<String> remainingPositions
+~ ArrayList<String> unassignedList
+~ Map<String,Object> positions
+~ FirebaseFirestore db
+~ RecyclerView recyclerView
+~ MyListAdapter adapter
+~ ArrayList<MyListData> myListData
+~ TextView textView
++ void onResume()
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void fetchData(String)
++ void onDestroyView()
+}
+class com.example.skillmatrix.Adapter.SkillsAdapter {
+- {static} ArrayList<Skills> skillsArrayList
+- Context context
+- OnContactClickListener onContactClickListener
+~ ArrayList<Skills> temp
++ ViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(ViewHolder,int)
++ void addSkill(Skills)
++ void deleteSkill(int)
++ Skills getSkill(int)
++ ArrayList<Skills> getSkills()
++ int getItemCount()
+}
+class com.example.skillmatrix.Adapter.SkillsAdapter.ViewHolder {
+~ TextView Skill
+~ TextView Level
+~ OnContactClickListener onContactClickListener
++ void onClick(View)
+}
+interface com.example.skillmatrix.Adapter.SkillsAdapter.OnContactClickListener {
+~ void onItemClick(Skills)
+}
+class com.example.skillmatrix.ExampleUnitTest {
++ void addition_isCorrect()
+}
+
+
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.NavHeaderMainBinding
+androidx.lifecycle.ViewModel <|-- com.example.skillmatrix.ui.notifyHR.NotifyHRViewModel
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.ListItemBinding
+android.os.Parcelable <|.. com.example.skillmatrix.Model.Skills
+androidx.appcompat.app.AppCompatActivity <|-- com.example.skillmatrix.MainActivity
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.ActivityAddEmployeeBinding
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.FragmentNotifyhrBinding
+androidx.appcompat.app.AppCompatActivity <|-- com.example.skillmatrix.ReporteesDetailActivity
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.FragmentSlideshowBinding
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.FragmentHomeBinding
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.ActivityReporteesDetailBinding
+com.example.skillmatrix.ui.gallery.Adapter <|-- com.example.skillmatrix.ui.gallery.MyListAdapter
+com.example.skillmatrix.ui.gallery.MyListAdapter +.. com.example.skillmatrix.ui.gallery.MyListAdapter.ViewHolder
+com.example.skillmatrix.ui.gallery.ViewHolder <|-- com.example.skillmatrix.ui.gallery.MyListAdapter.ViewHolder
+com.example.skillmatrix.OnContactClickListener <|.. com.example.skillmatrix.AddandEditMyProfile
+androidx.appcompat.app.AppCompatActivity <|-- com.example.skillmatrix.AddandEditMyProfile
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.SkillRecyclerViewBinding
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.DialogBinding
+androidx.lifecycle.ViewModel <|-- com.example.skillmatrix.ui.slideshow.ProjectsRequirementsViewModel
+androidx.lifecycle.ViewModel <|-- com.example.skillmatrix.ui.scheduler.SchedulerViewModel
+androidx.fragment.app.Fragment <|-- com.example.skillmatrix.ui.scheduler.SchedulerFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.example.skillmatrix.Register
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.FragmentSchedulerBinding
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.ActivityMainBinding
+androidx.fragment.app.Fragment <|-- com.example.skillmatrix.ui.home.MyProfileFragment
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.ContentMainBinding
+androidx.lifecycle.ViewModel <|-- com.example.skillmatrix.ui.home.MyProfileViewModel
+androidx.fragment.app.Fragment <|-- com.example.skillmatrix.ui.notifyHR.NotifyHRFragment
+androidx.fragment.app.Fragment <|-- com.example.skillmatrix.ui.gallery.ManagersReporteesFragment
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.FragmentGalleryBinding
+androidx.appcompat.app.AppCompatActivity <|-- com.example.skillmatrix.AddEmployeeActivity
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.AppBarMainBinding
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.LoginActivityBinding
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.ActivityAddandEditMyProfileBinding
+androidx.lifecycle.ViewModel <|-- com.example.skillmatrix.ui.gallery.ManagersReporteesViewModel
+androidx.viewbinding.ViewBinding <|.. com.example.skillmatrix.databinding.RegisterActivityBinding
+androidx.appcompat.app.AppCompatActivity <|-- com.example.skillmatrix.Login
+androidx.fragment.app.Fragment <|-- com.example.skillmatrix.ui.slideshow.ProjectsRequirementsFragment
+com.example.skillmatrix.Adapter.Adapter <|-- com.example.skillmatrix.Adapter.SkillsAdapter
+com.example.skillmatrix.Adapter.SkillsAdapter +.. com.example.skillmatrix.Adapter.SkillsAdapter.ViewHolder
+com.example.skillmatrix.Adapter.OnClickListener <|.. com.example.skillmatrix.Adapter.SkillsAdapter.ViewHolder
+com.example.skillmatrix.Adapter.ViewHolder <|-- com.example.skillmatrix.Adapter.SkillsAdapter.ViewHolder
+com.example.skillmatrix.Adapter.SkillsAdapter +.. com.example.skillmatrix.Adapter.SkillsAdapter.OnContactClickListener
+@enduml

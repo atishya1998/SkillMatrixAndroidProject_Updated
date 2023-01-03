@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/backdrop">
+
+    <view
+        class="android.widget.LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="240px"
+        android:background="#115AD7"
+        android:gravity="center"
+        android:requiresFadingEdge="vertical">
+
+        <TextView
+            android:id="@+id/appheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="@string/skill_matrix"
+            android:textColor="#E4E1E1"
+            android:textSize="100px"
+            tools:ignore="MissingConstraints" />
+
+    </view>
+
+
+    <view
+        class="android.widget.LinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/registerText"
+            android:textSize="65px" />
+
+        <TextView
+            android:id="@+id/userid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/userid"
+            android:textSize="45px" />
+
+        <EditText
+            android:id="@+id/useridET"
+            android:layout_width="270dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/enter_employeeid"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/first_name"
+            android:textSize="45px" />
+
+        <EditText
+            android:id="@+id/FullnameET"
+            android:layout_width="270dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/full_name"
+            android:inputType="text" />
+
+
+        <TextView
+            android:id="@+id/emailtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="45px" />
+
+        <EditText
+            android:id="@+id/emailET"
+            android:layout_width="270dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/passwordtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textSize="45px" />
+
+        <EditText
+            android:id="@+id/passwordET"
+            android:layout_width="270dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword" />
+    </view>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/RegisterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/appBlue"
+        android:padding="8dp"
+        android:text="@string/register"
+        android:textSize="16sp"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>
